@@ -1,0 +1,34 @@
+import { Component, signal } from '@angular/core';
+import { Product } from '../classes/iProduct';
+import { ProductHttpService } from '../services/product-http-service';
+
+@Component({
+  selector: 'app-product-list-call-http-service-component',
+  standalone: false,
+  styleUrl: './product-list-call-http-service-component.css',
+  templateUrl: './product-list-call-http-service-component.html',
+})
+export class ProductListCallHttpServiceComponent {
+  products=signal<Product[]>([]);
+  constructor(private _service:ProductHttpService)
+  //nạp chưa kịp, dữ liệu/element chưa kịp lên giao diện
+  {
+    
+  }
+  ngOnInit():void
+  {
+    this._service.getProductList().subscribe(
+      {
+        next: data =>
+          {
+            this.products.set(data);
+          },
+      error: (error) =>
+        {
+          console.log(error);
+          alert('Error Occurred while calling the service' + JSON.stringify(error));
+        }
+      }
+    )
+  }
+}

@@ -1,0 +1,39 @@
+<p>product-catalog works!</p>
+<table border="1" class="catalog-table">
+  <thead>
+    <tr>
+      <th>Ma Danh Muc</th>
+      <th>Ten Danh Muc</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let c of categories">
+    <tr class="cate-row">
+      <td>{{ c.Cateid }}</td>
+      <td>{{ c.CateName }}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="nested-td">
+        <table border="1" class="product-table">
+          <thead>
+            <tr>
+              <th>Ma San Pham</th>
+              <th>Ten San Pham</th>
+              <th>Gia San Pham</th>
+              <th>Picture</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of c.Products">
+              <td>{{ p.ProductId }}</td>
+              <td>{{ p.ProductName }}</td>
+              <td>{{ p.Price }}</td>
+              <td>
+                <img [src]="p.Image" [alt]="p.ProductName">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

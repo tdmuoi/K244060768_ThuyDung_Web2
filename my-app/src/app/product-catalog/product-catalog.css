@@ -1,0 +1,39 @@
+.catalog-table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 400px;
+  border: 1px solid #777;
+}
+
+.catalog-table th, 
+.catalog-table td {
+  border: 1px solid #777;
+  padding: 6px 12px;
+  text-align: left;
+}
+
+.nested-td {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.product-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #777;
+}
+
+.product-table th, 
+.product-table td {
+  border: 1px solid #777;
+  padding: 6px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.product-table img {
+  max-width: 65px;
+  max-height: 65px;
+  object-fit: contain;
+  display: block;
+}

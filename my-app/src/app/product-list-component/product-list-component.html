@@ -1,0 +1,39 @@
+<p>Danh sach san pham - cach 1: *ngFor</p>
+<table border="1">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Image</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" [class.price-negative]="product.price < 0">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td><img [src]="product.image" [alt]="product.name" width="100" height="100"></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Danh sach san pham - cach 2: &#64;for</p>
+<table border="1">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products; track product.id) {
+            <tr [class.price-negative]="product.price < 0">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+            </tr>
+        }
+    </tbody>
+</table>

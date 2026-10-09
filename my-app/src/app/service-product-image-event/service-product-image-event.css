@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #aaa;
+}
+
+th, td {
+  padding: 8px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}

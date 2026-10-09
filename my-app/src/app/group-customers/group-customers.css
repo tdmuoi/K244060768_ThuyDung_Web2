@@ -1,0 +1,29 @@
+.customer-table {
+  border-collapse: collapse;
+  margin-top: 15px;
+  min-width: 500px;
+  border: 1px solid #777;
+  font-family: Arial, sans-serif;
+}
+
+.customer-table th,
+.customer-table td {
+  border: 1px solid #777;
+  padding: 6px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.group-header-row td {
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #777;
+  padding: 6px 12px;
+}
+
+.customer-table td img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: cover;
+  display: block;
+}

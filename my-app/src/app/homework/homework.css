@@ -1,0 +1,57 @@
+#container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+    border: 1px solid blue;
+    display:inline-flex;
+    
+}
+
+#container ul li {
+    position: relative;
+}
+
+#container ul li a {
+    display: block;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#container ul li:hover > a {
+    background-color: orange;
+    color: white;
+}
+
+#container ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    flex-direction: column;
+}
+
+#container ul li:hover ul {
+    display: flex;
+}
+
+#container ul li ul li {
+    width: 150px;
+    border: 1px solid green;
+}
+
+#container ul li ul li a {
+    color: black;
+    background-color: white;
+    text-align: left;
+}
+
+#container ul li ul li a:hover {
+    background-color: orange;
+    color: white;
+}
