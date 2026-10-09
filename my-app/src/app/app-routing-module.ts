@@ -23,6 +23,7 @@ import { authGuard } from './classes/auth.guard';
 import { CourseRegistrationComponent } from './course-registration-component/course-registration-component';
 import { LoginComponent } from './login-component/login-component';
 import { CourseRegistrationReactiveComponent } from './course-registration-reactive-component/course-registration-reactive-component';
+import { FakeProductComponent } from './fake-product-component/fake-product-component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: "products", component: ProductListAdvancedComponent },
   { path: "products/:id", component: ProductDetailComponent },
   { path: "search-product", component: ProductListSearchComponent },
+  { path: "fakeproducts",component:FakeProductComponent},
   { path: "", component: ContactComponent },
   { path: "login", component: LoginComponent },
   {

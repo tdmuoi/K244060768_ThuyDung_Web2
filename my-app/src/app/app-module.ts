@@ -29,6 +29,7 @@ import { PageNotFoundComponent } from './page-not-found-component/page-not-found
 import { CourseRegistrationComponent } from './course-registration-component/course-registration-component';
 import { LoginComponent } from './login-component/login-component';
 import { CourseRegistrationReactiveComponent } from './course-registration-reactive-component/course-registration-reactive-component';
+import { FakeProductComponent } from './fake-product-component/fake-product-component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CourseRegistrationReactiveComponent } from './course-registration-react
     CourseRegistrationComponent,
     LoginComponent,
     CourseRegistrationReactiveComponent,
+    FakeProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(withInterceptorsFromDi())],
