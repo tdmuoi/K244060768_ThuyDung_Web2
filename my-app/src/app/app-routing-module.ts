@@ -24,6 +24,8 @@ import { CourseRegistrationComponent } from './course-registration-component/cou
 import { LoginComponent } from './login-component/login-component';
 import { CourseRegistrationReactiveComponent } from './course-registration-reactive-component/course-registration-reactive-component';
 import { FakeProductComponent } from './fake-product-component/fake-product-component';
+import { BooksComponent } from './books-component/books-component';
+import { BookDetailComponent } from './book-detail-component/book-detail-component';
 
 
 const routes: Routes = [
@@ -48,6 +50,8 @@ const routes: Routes = [
   { path: "fakeproducts",component:FakeProductComponent},
   { path: "", component: ContactComponent },
   { path: "login", component: LoginComponent },
+  { path: "book-list",component:BooksComponent},
+  { path: "book-detail",component:BookDetailComponent},
   {
     path: "samplenested",
     component: ProductListAdvancedComponent,
