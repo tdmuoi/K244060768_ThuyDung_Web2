@@ -28,7 +28,6 @@ let  database=[
     {"BookId":"b4","BookName":"Máy học nâng cao","Price":300,"Image":"b4.png"},
     {"BookId":"b5","BookName":"Lập trình Robot cơ bản","Price":250,"Image":"b5.png"},
   ]
-  
 app.get("/books",(req,res)=>{
     res.send(database)
 })
