@@ -1,0 +1,248 @@
+.search-page {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  background: #f6f4f2;
+  padding: 28px 32px 48px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 0 0 24px;
+}
+
+/* ===== Phần trên: khung tìm kiếm ===== */
+.search-panel {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.search-input {
+  position: relative;
+}
+
+.search-input input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 14px 44px 14px 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input input:focus {
+  border-color: #c2185b;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: #eee;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  color: #555;
+}
+
+.clear-btn:hover {
+  background: #ddd;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  margin-top: 18px;
+}
+
+.option-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.option-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.option-group input[type="radio"] {
+  accent-color: #c2185b;
+  cursor: pointer;
+}
+
+.option-group select {
+  font-size: 15px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed #e2e2e2;
+}
+
+.legend-item {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* ===== Phần dưới: bảng kết quả ===== */
+.summary,
+.message {
+  max-width: 1100px;
+  margin: 0 auto 14px;
+  color: #555;
+}
+
+.message {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.message.error {
+  color: #d32f2f;
+}
+
+.table-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.result-table th {
+  background: #222;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding: 14px 12px;
+  white-space: nowrap;
+}
+
+.result-table td {
+  padding: 12px;
+  vertical-align: middle;
+  border-bottom: 2px solid #fff;
+  font-size: 14px;
+}
+
+.col-id {
+  font-family: Consolas, monospace;
+  font-size: 12px !important;
+  word-break: break-all;
+  width: 120px;
+}
+
+.col-style {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.col-subject {
+  font-weight: 600;
+  width: 220px;
+}
+
+.detail-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.col-image img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.col-similarity {
+  font-size: 18px !important;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 28px !important;
+}
+
+/* ===== Màu theo Similarity ===== */
+/* [0.75 -> 1]: nền vàng + chữ đỏ */
+.sim-high,
+tr.sim-high td {
+  background: #ffeb3b;
+  color: #d50000;
+}
+
+/* [0.5 -> 0.75): nền hồng + chữ xanh */
+.sim-medium,
+tr.sim-medium td {
+  background: #f8bbd0;
+  color: #0d47a1;
+}
+
+/* < 0.5: nền đỏ + chữ trắng */
+.sim-low,
+tr.sim-low td {
+  background: #d32f2f;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .search-page {
+    padding: 20px 16px;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+}

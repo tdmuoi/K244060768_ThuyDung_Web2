@@ -35,6 +35,28 @@ export class BookAPIService {
         retry(3),
         catchError(this.handleError))
   }
+  postBook(aBook:any):Observable<any>
+  {
+    const headers=new HttpHeaders().set("Content-Type","application/json;charset=utf-8")
+    const requestOptions:Object={
+      headers:headers,
+      responseType:"text"
+    }
+    return this._http.post<any>("/books",JSON.stringify(aBook),requestOptions).pipe(
+        map(res=>JSON.parse(res) as Array<IBook>),
+        retry(3),
+        catchError(this.handleError))
+  }
+    putBook(aBook:any):Observable<any>
+  {
+    const headers=new HttpHeaders().set("Content-Type","application/json;charset=utf-8")
+    const requestOptions:Object={
+      headers:headers,
+      responseType:"text"
+    }
+    return this._http.put<any>("/books",JSON.stringify(aBook),requestOptions).pipe(
+        map(res=>JSON.parse(res) as Array<IBook>),
+        retry(3),
+        catchError(this.handleError))
+  }
 }
-
-

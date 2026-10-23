@@ -26,6 +26,11 @@ import { CourseRegistrationReactiveComponent } from './course-registration-react
 import { FakeProductComponent } from './fake-product-component/fake-product-component';
 import { BooksComponent } from './books-component/books-component';
 import { BookDetailComponent } from './book-detail-component/book-detail-component';
+import { BookNewComponent } from './book-new-component/book-new-component';
+import { BookUpdateComponent } from './book-update-component/book-update-component';
+import { FashionComponent } from './fashion-component/fashion-component';
+import { FashionDetailComponent } from './fashion-detail-component/fashion-detail-component';
+import { SearchFashionComponent } from './search-fashion-component/search-fashion-component';
 
 
 const routes: Routes = [
@@ -52,6 +57,11 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "book-list",component:BooksComponent},
   { path: "book-detail",component:BookDetailComponent},
+  { path: "book-new",component:BookNewComponent},
+  { path: "book-update",component:BookUpdateComponent},
+  { path: "fashion", component: FashionComponent },
+  { path: "fashion-detail", component: FashionDetailComponent},
+  { path: "search-fashion", component: SearchFashionComponent},
   {
     path: "samplenested",
     component: ProductListAdvancedComponent,
